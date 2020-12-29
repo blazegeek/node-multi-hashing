@@ -13,7 +13,6 @@ extern "C" {
 	#include "cryptonight_fast.h"
 	#include "fresh.h"
 	#include "fugue.h"
-	#include "geek.h"
 	#include "groestl.h"
 	#include "hefty1.h"
 	#include "keccak.h"
@@ -39,6 +38,8 @@ extern "C" {
 	#include "crypto/sponge.h"
 	#include "crypto/argon2/argon2.h"
 	#include "crypto/yescrypt/yescrypt.h"
+	#include "geek.h"
+
 }
 
 using namespace node;
@@ -83,7 +84,6 @@ DECLARE_CALLBACK(blake, blake_hash, 32);
 DECLARE_CALLBACK(c11, c11_hash, 32);
 DECLARE_CALLBACK(fresh, fresh_hash, 32);
 DECLARE_CALLBACK(fugue, fugue_hash, 32);
-DECLARE_CALLBACK(geek, geek_hash, 32);
 DECLARE_CALLBACK(groestl, groestl_hash, 32);
 DECLARE_CALLBACK(groestlmyriad, groestlmyriad_hash, 32);
 DECLARE_CALLBACK(hefty1, hefty1_hash, 32);
@@ -106,6 +106,7 @@ DECLARE_CALLBACK(x15, x15_hash, 32);
 DECLARE_CALLBACK(x16r, x16r_hash, 32);
 DECLARE_CALLBACK(x16rv2, x16rv2_hash, 32);
 DECLARE_CALLBACK(yescrypt, yescrypt_hash, 32);
+DECLARE_CALLBACK(geek, geek_hash, 32);
 
 DECLARE_FUNC(argon2d) {
 	if (info.Length() < 4)
@@ -417,7 +418,6 @@ NAN_MODULE_INIT(init) {
 	NAN_EXPORT(target, cryptonightfast);
 	NAN_EXPORT(target, fresh);
 	NAN_EXPORT(target, fugue);
-	NAN_EXPORT(target, geek);
 	NAN_EXPORT(target, groestl);
 	NAN_EXPORT(target, groestlmyriad);
 	NAN_EXPORT(target, hefty1);
@@ -444,6 +444,7 @@ NAN_MODULE_INIT(init) {
 	NAN_EXPORT(target, x16rv2);
 	NAN_EXPORT(target, neoscrypt);
 	NAN_EXPORT(target, yescrypt);
+	NAN_EXPORT(target, geek);
 }
 
 NODE_MODULE(multihashing, init)
