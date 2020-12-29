@@ -11,7 +11,9 @@
         "url": "https://github.com/blazegeek/node-multi-hashing.git"
     },
     "scripts": {
-        "build": "node-gyp rebuild"
+        "install": "node-gyp configure build",
+        "build": "node-gyp rebuild",
+        "debug": "node-gyp rebuild --debug"
     },
     "dependencies": {
         "bindings": "*",
