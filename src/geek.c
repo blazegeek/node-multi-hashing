@@ -6,25 +6,31 @@
 
 #include "sha3/sph_blake.h"
 #include "sha3/sph_bmw.h"
-#include "sha3/sph_echo.h"
-#include "sha3/sph_shabal.h"
 #include "sha3/sph_groestl.h"
-#include "sha3/sph_cubehash.h"
+#include "sha3/sph_jh.h"
 #include "sha3/sph_keccak.h"
-#include "sha3/sph_hamsi.h"
+#include "sha3/sph_skein.h"
+#include "sha3/sph_luffa.h"
+#include "sha3/sph_cubehash.h"
+#include "sha3/sph_shavite.h"
 #include "sha3/sph_simd.h"
+#include "sha3/sph_echo.h"
+#include "sha3/sph_hamsi.h"
+#include "sha3/sph_fugue.h"
+#include "sha3/sph_shabal.h"
+#include "sha3/sph_whirlpool.h"
 
 void geek_hash(const char* input, char* output, uint32_t len)
 {
-	sph_blake512_context ctx_blake;
-	sph_bmw512_context ctx_bmw;
-	sph_echo512_context ctx_echo;
-	sph_shabal512_context ctx_shabal;
-	sph_groestl512_context ctx_groestl;    
-	sph_cubehash512_context ctx_cubehash;      
-	sph_keccak512_context ctx_keccak;    
-	sph_hamsi512_context ctx_hamsi;
-	sph_simd512_context ctx_simd;
+	sph_blake512_context	ctx_blake;
+	sph_bmw512_context		ctx_bmw;
+	sph_echo512_context		ctx_echo;
+	sph_shabal512_context	ctx_shabal;
+	sph_groestl512_context	ctx_groestl;    
+	sph_cubehash512_context		ctx_cubehash;      
+	sph_keccak512_context	ctx_keccak;    
+	sph_hamsi512_context	ctx_hamsi;
+	sph_simd512_context		ctx_simd;
 
 	// These uint512 in the c++ source of the client are backed by an array of uint32
 	uint32_t hashA[16], hashB[16];	
