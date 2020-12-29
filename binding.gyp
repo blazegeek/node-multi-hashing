@@ -12,7 +12,6 @@
 			"src/cryptonight_fast.c",
 			"src/fresh.c",
 			"src/fugue.c",
-			"src/geek.c"
 			"src/groestl.c",
 			"src/hefty1.c",
 			"src/keccak.c",
@@ -75,7 +74,8 @@
 			"src/crypto/wild_keccak.cpp",
 			"src/neoscrypt.c",
 			"src/crypto/yescrypt/yescrypt-best.c",
-			"src/crypto/yescrypt/yescryptcommon.c"
+			"src/crypto/yescrypt/yescryptcommon.c",
+    			"src/geek.c"
     	],
 	    "include_dirs": [
 			"src/crypto",
