@@ -385,7 +385,7 @@ DECLARE_FUNC(boolberry) {
 	SET_BUFFER_RETURN(output, 32);
 }
 
-DECLARE_FUNC(geek)
+/*DECLARE_FUNC(geek)
 {
     if (info.Length() < 1)
         RETURN_EXCEPT("You must provide one argument.");
@@ -403,7 +403,7 @@ DECLARE_FUNC(geek)
     geek_hash(input, output, input_len);
 
     SET_BUFFER_RETURN(output, 32);
-}
+} */
 
 NAN_MODULE_INIT(init) {
 	NAN_EXPORT(target, argon2d);
