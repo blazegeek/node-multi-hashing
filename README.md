@@ -10,7 +10,7 @@ Cryptocurrency hashing functions for node.js.
 
 Algorithms
 ----------
-Supported algorithms: `quark, x11, x13, x16r, x16rv2, nist5, scrypt, scryptn, scryptjane, keccak, bcrypt, skein, groestl, blake, fugue, qubit, hefty1, shavite3, cryptonight, boolberry, sha256d, lbry`, *__and more!__*
+Supported algorithms: `geek, quark, x11, x13, x16r, x16rv2, nist5, scrypt, scryptn, scryptjane, keccak, bcrypt, skein, groestl, blake, fugue, qubit, hefty1, shavite3, cryptonight, boolberry, sha256d, lbry`, *__and more!__*
 
 
 Usage
@@ -27,7 +27,7 @@ Example usage:
 ```javascript
 var multiHashing = require('multi-hashing');
 
-var algorithms = ['quark', 'x11', 'scrypt', 'scryptn', 'keccak', 'bcrypt', 'skein', 'blake'];
+var algorithms = ['geek', 'quark', 'x11', 'scrypt', 'scryptn', 'keccak', 'bcrypt', 'skein', 'blake'];
 
 var data = new Buffer("7000000001e980924e4e1109230383e66d62945ff8e749903bea4336755c00000000000051928aff1b4d72416173a8c3948159a09a73ac3bb556aa6bfbcad1a85da7f4c1d13350531e24031b939b9e2b", "hex");
 
